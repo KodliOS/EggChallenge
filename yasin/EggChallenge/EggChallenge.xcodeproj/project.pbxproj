@@ -3,10 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C23A2DAF23B651E200180383 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23A2DAE23B651E200180383 /* MainView.swift */; };
+		C23A2DB923B664AF00180383 /* UIView+CAGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23A2DB823B664AF00180383 /* UIView+CAGradientLayer.swift */; };
+		C23A2DBB23B66DEF00180383 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23A2DBA23B66DEF00180383 /* UIView.swift */; };
+		C23A2DC323B6759000180383 /* Clock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23A2DC223B6759000180383 /* Clock.swift */; };
+		C23A2DCC23B67A6500180383 /* EggType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23A2DCB23B67A6500180383 /* EggType.swift */; };
+		C23A2DCF23B68AAA00180383 /* UIView+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23A2DCE23B68AAA00180383 /* UIView+Animation.swift */; };
 		C267510723A2E03D00F4D9C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C267510623A2E03D00F4D9C5 /* AppDelegate.swift */; };
 		C267510B23A2E03D00F4D9C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C267510A23A2E03D00F4D9C5 /* ViewController.swift */; };
 		C267511023A2E03E00F4D9C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C267510F23A2E03E00F4D9C5 /* Assets.xcassets */; };
@@ -16,6 +22,12 @@
 
 /* Begin PBXFileReference section */
 		BDDE6A6695D2BCF33ACD867F /* Pods_EggChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EggChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C23A2DAE23B651E200180383 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		C23A2DB823B664AF00180383 /* UIView+CAGradientLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+CAGradientLayer.swift"; sourceTree = "<group>"; };
+		C23A2DBA23B66DEF00180383 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		C23A2DC223B6759000180383 /* Clock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clock.swift; sourceTree = "<group>"; };
+		C23A2DCB23B67A6500180383 /* EggType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EggType.swift; path = ../../../../../../../../../Documents/EggType.swift; sourceTree = "<group>"; };
+		C23A2DCE23B68AAA00180383 /* UIView+Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Animation.swift"; sourceTree = "<group>"; };
 		C267510323A2E03D00F4D9C5 /* EggChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EggChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C267510623A2E03D00F4D9C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C267510A23A2E03D00F4D9C5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +68,7 @@
 		C23A2DA523B64AB800180383 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				C23A2DC823B6797D00180383 /* Shared */,
 				C23A2DAB23B64AEE00180383 /* Main */,
 			);
 			path = Scenes;
@@ -73,7 +86,6 @@
 			isa = PBXGroup;
 			children = (
 				C23A2DA923B64ADD00180383 /* Core */,
-				C23A2DAA23B64AE000180383 /* Env */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -96,17 +108,11 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
-		C23A2DAA23B64AE000180383 /* Env */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Env;
-			sourceTree = "<group>";
-		};
 		C23A2DAB23B64AEE00180383 /* Main */ = {
 			isa = PBXGroup;
 			children = (
 				C267510A23A2E03D00F4D9C5 /* ViewController.swift */,
+				C23A2DAE23B651E200180383 /* MainView.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -114,8 +120,44 @@
 		C23A2DAC23B64B3B00180383 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				C23A2DB723B6649D00180383 /* UIView */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C23A2DB723B6649D00180383 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				C23A2DB823B664AF00180383 /* UIView+CAGradientLayer.swift */,
+				C23A2DBA23B66DEF00180383 /* UIView.swift */,
+				C23A2DCE23B68AAA00180383 /* UIView+Animation.swift */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		C23A2DC823B6797D00180383 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				C23A2DCA23B67A5C00180383 /* Enum */,
+				C23A2DC923B6798200180383 /* View */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		C23A2DC923B6798200180383 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C23A2DC223B6759000180383 /* Clock.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C23A2DCA23B67A5C00180383 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				C23A2DCB23B67A6500180383 /* EggType.swift */,
+			);
+			path = Enum;
 			sourceTree = "<group>";
 		};
 		C26750FA23A2E03D00F4D9C5 = {
@@ -154,7 +196,6 @@
 				C64285826B368D9B7DA41283 /* Pods-EggChallenge.debug.xcconfig */,
 				FA30BB5CCC46AD8413E774F0 /* Pods-EggChallenge.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -273,7 +314,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C267510B23A2E03D00F4D9C5 /* ViewController.swift in Sources */,
+				C23A2DAF23B651E200180383 /* MainView.swift in Sources */,
+				C23A2DC323B6759000180383 /* Clock.swift in Sources */,
+				C23A2DBB23B66DEF00180383 /* UIView.swift in Sources */,
+				C23A2DB923B664AF00180383 /* UIView+CAGradientLayer.swift in Sources */,
+				C23A2DCF23B68AAA00180383 /* UIView+Animation.swift in Sources */,
 				C267510723A2E03D00F4D9C5 /* AppDelegate.swift in Sources */,
+				C23A2DCC23B67A6500180383 /* EggType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
