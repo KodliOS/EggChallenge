@@ -11,12 +11,12 @@
 		C23A2DB923B664AF00180383 /* UIView+CAGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23A2DB823B664AF00180383 /* UIView+CAGradientLayer.swift */; };
 		C23A2DBB23B66DEF00180383 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23A2DBA23B66DEF00180383 /* UIView.swift */; };
 		C23A2DC323B6759000180383 /* Clock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23A2DC223B6759000180383 /* Clock.swift */; };
-		C23A2DCC23B67A6500180383 /* EggType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23A2DCB23B67A6500180383 /* EggType.swift */; };
 		C23A2DCF23B68AAA00180383 /* UIView+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23A2DCE23B68AAA00180383 /* UIView+Animation.swift */; };
+		C23A2DD123B69CFF00180383 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23A2DD023B69CFF00180383 /* MainController.swift */; };
 		C267510723A2E03D00F4D9C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C267510623A2E03D00F4D9C5 /* AppDelegate.swift */; };
-		C267510B23A2E03D00F4D9C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C267510A23A2E03D00F4D9C5 /* ViewController.swift */; };
 		C267511023A2E03E00F4D9C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C267510F23A2E03E00F4D9C5 /* Assets.xcassets */; };
 		C267511323A2E03E00F4D9C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C267511123A2E03E00F4D9C5 /* LaunchScreen.storyboard */; };
+		C2F5448E23B7651F0082FAA0 /* EggType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F5448D23B765000082FAA0 /* EggType.swift */; };
 		C9A62A0F613365D6C74CDC8D /* Pods_EggChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDDE6A6695D2BCF33ACD867F /* Pods_EggChallenge.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,14 +26,14 @@
 		C23A2DB823B664AF00180383 /* UIView+CAGradientLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+CAGradientLayer.swift"; sourceTree = "<group>"; };
 		C23A2DBA23B66DEF00180383 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		C23A2DC223B6759000180383 /* Clock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clock.swift; sourceTree = "<group>"; };
-		C23A2DCB23B67A6500180383 /* EggType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EggType.swift; path = ../../../../../../../../../Documents/EggType.swift; sourceTree = "<group>"; };
 		C23A2DCE23B68AAA00180383 /* UIView+Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Animation.swift"; sourceTree = "<group>"; };
+		C23A2DD023B69CFF00180383 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		C267510323A2E03D00F4D9C5 /* EggChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EggChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C267510623A2E03D00F4D9C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C267510A23A2E03D00F4D9C5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C267510F23A2E03E00F4D9C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C267511223A2E03E00F4D9C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C267511423A2E03E00F4D9C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2F5448D23B765000082FAA0 /* EggType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EggType.swift; sourceTree = "<group>"; };
 		C64285826B368D9B7DA41283 /* Pods-EggChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EggChallenge.debug.xcconfig"; path = "Target Support Files/Pods-EggChallenge/Pods-EggChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 		FA30BB5CCC46AD8413E774F0 /* Pods-EggChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EggChallenge.release.xcconfig"; path = "Target Support Files/Pods-EggChallenge/Pods-EggChallenge.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,7 +68,6 @@
 		C23A2DA523B64AB800180383 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				C23A2DC823B6797D00180383 /* Shared */,
 				C23A2DAB23B64AEE00180383 /* Main */,
 			);
 			path = Scenes;
@@ -111,8 +110,8 @@
 		C23A2DAB23B64AEE00180383 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				C267510A23A2E03D00F4D9C5 /* ViewController.swift */,
 				C23A2DAE23B651E200180383 /* MainView.swift */,
+				C23A2DD023B69CFF00180383 /* MainController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -129,19 +128,10 @@
 			isa = PBXGroup;
 			children = (
 				C23A2DB823B664AF00180383 /* UIView+CAGradientLayer.swift */,
-				C23A2DBA23B66DEF00180383 /* UIView.swift */,
 				C23A2DCE23B68AAA00180383 /* UIView+Animation.swift */,
+				C23A2DBA23B66DEF00180383 /* UIView.swift */,
 			);
 			path = UIView;
-			sourceTree = "<group>";
-		};
-		C23A2DC823B6797D00180383 /* Shared */ = {
-			isa = PBXGroup;
-			children = (
-				C23A2DCA23B67A5C00180383 /* Enum */,
-				C23A2DC923B6798200180383 /* View */,
-			);
-			path = Shared;
 			sourceTree = "<group>";
 		};
 		C23A2DC923B6798200180383 /* View */ = {
@@ -150,14 +140,6 @@
 				C23A2DC223B6759000180383 /* Clock.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		C23A2DCA23B67A5C00180383 /* Enum */ = {
-			isa = PBXGroup;
-			children = (
-				C23A2DCB23B67A6500180383 /* EggType.swift */,
-			);
-			path = Enum;
 			sourceTree = "<group>";
 		};
 		C26750FA23A2E03D00F4D9C5 = {
@@ -181,13 +163,31 @@
 		C267510523A2E03D00F4D9C5 /* EggChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				C23A2DA423B64AB300180383 /* Contracts */,
+				C2F5448C23B764F30082FAA0 /* Shared */,
 				C23A2DA523B64AB800180383 /* Scenes */,
 				C23A2DA623B64ABC00180383 /* Utilities */,
 				C23A2DA723B64AC500180383 /* App */,
 				C23A2DA823B64AC800180383 /* Supporting Files */,
 			);
 			path = EggChallenge;
+			sourceTree = "<group>";
+		};
+		C2F5448C23B764F30082FAA0 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				C23A2DA423B64AB300180383 /* Contracts */,
+				C2F5448F23B765270082FAA0 /* Enum */,
+				C23A2DC923B6798200180383 /* View */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		C2F5448F23B765270082FAA0 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				C2F5448D23B765000082FAA0 /* EggType.swift */,
+			);
+			path = Enum;
 			sourceTree = "<group>";
 		};
 		F759E6195F9C66B40F10EDFD /* Pods */ = {
@@ -313,14 +313,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C267510B23A2E03D00F4D9C5 /* ViewController.swift in Sources */,
+				C23A2DD123B69CFF00180383 /* MainController.swift in Sources */,
 				C23A2DAF23B651E200180383 /* MainView.swift in Sources */,
 				C23A2DC323B6759000180383 /* Clock.swift in Sources */,
 				C23A2DBB23B66DEF00180383 /* UIView.swift in Sources */,
 				C23A2DB923B664AF00180383 /* UIView+CAGradientLayer.swift in Sources */,
+				C2F5448E23B7651F0082FAA0 /* EggType.swift in Sources */,
 				C23A2DCF23B68AAA00180383 /* UIView+Animation.swift in Sources */,
 				C267510723A2E03D00F4D9C5 /* AppDelegate.swift in Sources */,
-				C23A2DCC23B67A6500180383 /* EggType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

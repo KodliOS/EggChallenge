@@ -10,12 +10,13 @@ import UIKit
 import Clocket
 import SnapKit
 
-class MainView: UIView {
+public final class MainView: UIView {
     private var layout = Layout()
     
     private var clock = Clock(frame: CGRect(x: 0, y: 0, width: 500, height: 500))
     
     private var currentSegmentIndex = 0
+    private var isBoil = false
     
     private lazy var segmentedControl: UISegmentedControl = {
         let segment = UISegmentedControl(items: EggType.items)
@@ -23,7 +24,8 @@ class MainView: UIView {
         segment.tintColor = #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1)
         segment.selectedSegmentTintColor = #colorLiteral(red: 0.9607843161, green: 0.7058823705, blue: 0.200000003, alpha: 1)
         segment.backgroundColor = #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1)
-        
+        segment.layer.borderColor = UIColor.black.cgColor
+        segment.layer.borderWidth = 1
         return segment
     }()
     
@@ -37,6 +39,21 @@ class MainView: UIView {
         label.textColor = #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1)
         return label
     }()
+    
+    private lazy var startButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Start", for: .normal)
+        button.titleLabel?.font = button.titleLabel?.font.withSize(70)
+        button.titleLabel?.textColor = .white
+        button.layer.borderColor = UIColor.white.cgColor
+        button.layer.borderWidth = 2
+        button.titleLabel?.adjustsFontSizeToFitWidth = true
+        button.titleLabel?.minimumScaleFactor = 0.5
+        button.addTarget(self, action: #selector(startButtonClicked(_:)), for: .touchUpInside)
+        return button
+    }()
+    
+    var angle = CGFloat.pi * 2
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -53,10 +70,11 @@ class MainView: UIView {
         self.setGradient(color1: #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1), color2: #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1), startType: .vertical)
     }
     
-    func setupView() {
+    private func setupView() {
         setupClock()
         setupSegmentedControl()
         setupTimeLabel()
+        setupStartButton()
     }
     
     private func setupClock() {
@@ -88,6 +106,14 @@ class MainView: UIView {
         }
     }
     
+    private func setupStartButton() {
+        addSubview(startButton)
+        startButton.snp.makeConstraints { make in
+            make.bottom.left.right.equalToSuperview().inset(25)
+            make.height.equalTo(bounds.height / 7)
+        }
+    }
+    
     @objc
     func didChangedSegmentedControl(sender: UISegmentedControl) {
         currentSegmentIndex = sender.selectedSegmentIndex
@@ -102,12 +128,26 @@ class MainView: UIView {
             timeString = "06:30"
             clock.setTimer(type: .hard)
         }
-        
-        timeLabel.fadeOut { _ in
+        timeLabel.fade(type: .out) { _ in
             self.timeLabel.text = timeString
-            self.timeLabel.fadeIn(completion: nil)
+            self.timeLabel.fade(type: .identity, completion: nil)
         }
         clock.stop()
+    }
+    
+    @objc
+    func startButtonClicked(_ sender: UIButton) {
+        if isBoil == false {
+            startButton.shake { _ in
+                self.startButton.backgroundColor = .red
+                self.startButton.setTitle("Boil ?", for: .normal)
+                self.isBoil = true
+            }
+        } else {
+            self.startButton.backgroundColor = #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)
+            self.startButton.setTitle("Waiting", for: .normal)
+            clock.start()
+        }
     }
     
     private struct Layout {
