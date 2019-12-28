@@ -140,6 +140,7 @@ public final class MainView: UIView {
             self.timeLabel.fade(type: .identity, completion: nil)
         }
         clock.stop()
+        delegate?.mainView(self, didSegmentValueChanged: sender)
     }
     
     @objc
@@ -159,6 +160,7 @@ public final class MainView: UIView {
             clock.start()
             isBoil = !isBoil
         }
+        delegate?.mainView(self, didTapStartButton: sender)
     }
     
     private struct Layout {
