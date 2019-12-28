@@ -22,13 +22,11 @@ public final class Clock: UIView {
         addSubview(clock)
         clock.isUserInteractionEnabled = false
         clock.countDownTimer = true
-        clock.displayRealTime = true
         clock.manualTimeSetAllowed = false
         clock.reverseTime = true
         clock.snp.makeConstraints { make in
             make.leading.top.trailing.bottom.equalToSuperview()
         }
-        clock.startClock()
     }
     
     public func start() {

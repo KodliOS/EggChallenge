@@ -10,11 +10,19 @@ import UIKit
 import Clocket
 import SnapKit
 
+public protocol MainViewDelegate: class {
+    func mainView(_ mainView: MainView, didTapStartButton button: UIButton)
+    func mainView(_ mainView: MainView, didSegmentValueChanged segmentControl: UISegmentedControl)
+}
+
+// TODO: Add Progress Bar
+// TODO: Add Reset/Clear Button
 public final class MainView: UIView {
+    var delegate: MainViewDelegate?
+    
     private var layout = Layout()
-    
     private var clock = Clock(frame: CGRect(x: 0, y: 0, width: 500, height: 500))
-    
+    private var angle = CGFloat.pi * 2
     private var currentSegmentIndex = 0
     private var isBoil = false
     
@@ -52,9 +60,7 @@ public final class MainView: UIView {
         button.addTarget(self, action: #selector(startButtonClicked(_:)), for: .touchUpInside)
         return button
     }()
-    
-    var angle = CGFloat.pi * 2
-    
+        
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureAppearance()
@@ -79,12 +85,13 @@ public final class MainView: UIView {
     
     private func setupClock() {
         addSubview(clock)
+        clock.setTimer(type: .soft)
         clock.snp.makeConstraints { make in
             make.top.equalToSuperview().inset(layout.clockMargins.top)
             make.height.width.equalTo(bounds.height / 4)
             make.centerX.equalToSuperview()
         }
-        clock.start()
+        clock.stop()
     }
     
     private func setupSegmentedControl() {
@@ -110,7 +117,7 @@ public final class MainView: UIView {
         addSubview(startButton)
         startButton.snp.makeConstraints { make in
             make.bottom.left.right.equalToSuperview().inset(25)
-            make.height.equalTo(bounds.height / 7)
+            make.height.equalTo(bounds.height / 8)
         }
     }
     
@@ -137,16 +144,20 @@ public final class MainView: UIView {
     
     @objc
     func startButtonClicked(_ sender: UIButton) {
+        segmentedControl.isHidden = isBoil
+        timeLabel.isHidden = isBoil
         if isBoil == false {
             startButton.shake { _ in
                 self.startButton.backgroundColor = .red
                 self.startButton.setTitle("Boil ?", for: .normal)
                 self.isBoil = true
+                self.clock.stop()
             }
         } else {
             self.startButton.backgroundColor = #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)
             self.startButton.setTitle("Waiting", for: .normal)
             clock.start()
+            isBoil = !isBoil
         }
     }
     

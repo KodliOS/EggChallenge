@@ -19,3 +19,8 @@ final class MainController: UIViewController {
         view = MainView(frame: view.bounds)
     }
 }
+
+extension MainController: MainViewDelegate {
+    func mainView(_ mainView: MainView, didTapStartButton button: UIButton) { }
+    func mainView(_ mainView: MainView, didSegmentValueChanged segmentControl: UISegmentedControl) { }
+}
