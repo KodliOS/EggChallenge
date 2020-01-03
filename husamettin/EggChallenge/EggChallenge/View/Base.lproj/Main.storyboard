@@ -136,6 +136,9 @@
                                     <constraint firstAttribute="width" constant="300" id="3pt-vo-DAE"/>
                                     <constraint firstAttribute="height" constant="300" id="WV8-md-Be7"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="displayRealTime" value="NO"/>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3n0-yY-nXF" customClass="CustomButton" customModule="EggChallenge" customModuleProvider="target">
                                 <rect key="frame" x="107" y="370" width="200" height="55"/>
@@ -153,13 +156,41 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="startButtonTapped:" destination="xgi-0F-KWE" eventType="touchUpInside" id="q6K-ea-7hf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1SY-PR-Ylg" customClass="CustomButton" customModule="EggChallenge" customModuleProvider="target">
+                                <rect key="frame" x="107" y="465" width="200" height="55"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="55" id="Kje-vG-sCY"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="fgc-Lh-b6w"/>
+                                    <constraint firstAttribute="height" constant="55" id="gDw-4q-qME"/>
+                                    <constraint firstAttribute="width" constant="200" id="gKC-wI-5EU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="28"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="resetButtonTapped:" destination="xgi-0F-KWE" eventType="touchUpInside" id="gkN-bd-le8"/>
+                                    <action selector="startButtonTapped:" destination="xgi-0F-KWE" eventType="touchUpInside" id="sMk-07-nMf"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="3n0-yY-nXF" firstAttribute="centerX" secondItem="7w2-Yp-Cyg" secondAttribute="centerX" id="0Pd-SU-Zy8"/>
                             <constraint firstItem="aYO-Mq-bnf" firstAttribute="leading" secondItem="r1s-3T-z6u" secondAttribute="leading" id="4FI-4U-ael"/>
+                            <constraint firstItem="1SY-PR-Ylg" firstAttribute="centerX" secondItem="7w2-Yp-Cyg" secondAttribute="centerX" id="JAG-vD-eiA"/>
                             <constraint firstItem="9jB-5q-Pef" firstAttribute="top" secondItem="r1s-3T-z6u" secondAttribute="top" constant="20" id="Jsj-lA-fTP"/>
+                            <constraint firstItem="1SY-PR-Ylg" firstAttribute="top" secondItem="3n0-yY-nXF" secondAttribute="bottom" constant="40" id="SJL-2Z-Dw8"/>
                             <constraint firstItem="r1s-3T-z6u" firstAttribute="bottom" secondItem="aYO-Mq-bnf" secondAttribute="bottom" id="VDH-9v-dCj"/>
                             <constraint firstItem="3n0-yY-nXF" firstAttribute="top" secondItem="9jB-5q-Pef" secondAttribute="bottom" constant="30" id="WL8-Nm-3ih"/>
                             <constraint firstItem="r1s-3T-z6u" firstAttribute="trailing" secondItem="aYO-Mq-bnf" secondAttribute="trailing" id="aNK-Dq-kHS"/>
@@ -171,6 +202,7 @@
                     <navigationItem key="navigationItem" id="jRQ-BS-0Jn"/>
                     <connections>
                         <outlet property="clock" destination="9jB-5q-Pef" id="Tit-eA-IGG"/>
+                        <outlet property="startButton" destination="3n0-yY-nXF" id="1ef-w6-C4I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tpQ-WG-SVt" userLabel="First Responder" sceneMemberID="firstResponder"/>
