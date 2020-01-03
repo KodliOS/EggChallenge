@@ -18,6 +18,7 @@ class ClockViewController: UIViewController {
         super.viewDidLoad()
         clock.displayRealTime = true
         clock.startClock()
+        
 
         // Do any additional setup after loading the view.
     }

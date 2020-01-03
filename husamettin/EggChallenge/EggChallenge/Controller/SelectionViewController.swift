@@ -12,24 +12,35 @@ class SelectionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.isTranslucent = true
+        navigationController?.navigationBar.tintColor = #colorLiteral(red: 0.09019608051, green: 0, blue: 0.3019607961, alpha: 1)
     }
 
     @IBAction func selectButtonTapped(_ sender: UIButton) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "ClockViewController") as! ClockViewController
+        let vc = storyboard?.instantiateViewController(withIdentifier: "ClockViewController") as! ClockViewController
         vc.senderTag = sender.tag
         self.navigationController?.pushViewController(vc, animated: true)
+//        show(ClockViewController(), sender: self)
     }
+    
+    
 }
 
-extension UIButton {
-    override open var isHighlighted: Bool {
-        didSet {
-            backgroundColor = isHighlighted ? UIColor.purple : UIColor.lightGray
-        }
-    }
-}
+//extension UIButton {
+//    override open var isHighlighted: Bool {
+//        didSet {
+//            backgroundColor = isHighlighted ? UIColor.purple : UIColor.lightGray
+//        }
+//    }
+//}
 
 
 
