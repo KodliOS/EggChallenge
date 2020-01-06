@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="80G-O1-Iiy">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Selection View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="SelectionViewController" id="BYZ-38-t0r" customClass="SelectionViewController" customModule="EggChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="egg" translatesAutoresizingMaskIntoConstraints="NO" id="4j2-wW-obb">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How do you like your eggs?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K4g-4h-I0G">
+                                <rect key="frame" x="82" y="184" width="250" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="KSU-B0-vnn"/>
+                                    <constraint firstAttribute="width" constant="250" id="MR4-6a-82Q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AcW-U7-7I8" customClass="CustomButton" customModule="EggChallenge" customModuleProvider="target">
+                                <rect key="frame" x="107" y="359" width="200" height="55"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="Fnj-gs-jd5"/>
+                                    <constraint firstAttribute="width" constant="200" id="mEF-o2-UHe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="23"/>
+                                <state key="normal" title="SOFT">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="selectButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rMl-RO-BZW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.89999997615814209" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E6J-WV-dqt" customClass="CustomButton" customModule="EggChallenge" customModuleProvider="target">
+                                <rect key="frame" x="107" y="454" width="200" height="55"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Xzp-ii-bZ8"/>
+                                    <constraint firstAttribute="height" constant="55" id="uEY-dv-3tB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="23"/>
+                                <state key="normal" title="MEDIUM">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="selectButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pJM-sA-THN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.89999997615814209" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bt0-QU-303" customClass="CustomButton" customModule="EggChallenge" customModuleProvider="target">
+                                <rect key="frame" x="107" y="549" width="200" height="55"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="lLu-Qd-v10"/>
+                                    <constraint firstAttribute="width" constant="200" id="wLL-3y-WCX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="23"/>
+                                <state key="normal" title="HARD">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="selectButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q1c-hj-k9N"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4j2-wW-obb" secondAttribute="bottom" id="3o7-dR-DYB"/>
+                            <constraint firstItem="E6J-WV-dqt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HLa-D4-DD0"/>
+                            <constraint firstItem="bt0-QU-303" firstAttribute="top" secondItem="E6J-WV-dqt" secondAttribute="bottom" constant="40" id="LGW-sD-SIO"/>
+                            <constraint firstItem="bt0-QU-303" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UuA-6q-22Q"/>
+                            <constraint firstItem="AcW-U7-7I8" firstAttribute="top" secondItem="K4g-4h-I0G" secondAttribute="bottom" constant="100" id="X05-60-pNj"/>
+                            <constraint firstItem="E6J-WV-dqt" firstAttribute="top" secondItem="AcW-U7-7I8" secondAttribute="bottom" constant="40" id="Xhr-nn-IYQ"/>
+                            <constraint firstItem="K4g-4h-I0G" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="120" id="ZuJ-RG-Qlg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4j2-wW-obb" secondAttribute="trailing" id="fs1-OV-1UT"/>
+                            <constraint firstItem="AcW-U7-7I8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lMN-7F-OGr"/>
+                            <constraint firstItem="4j2-wW-obb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="txC-QH-u30"/>
+                            <constraint firstItem="4j2-wW-obb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="yBw-tq-gud"/>
+                            <constraint firstItem="K4g-4h-I0G" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zPc-uP-TyA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Zqc-xh-qVj"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1039.1304347826087" y="138.58695652173915"/>
+        </scene>
+        <!--Clock View Controller-->
+        <scene sceneID="fEU-EQ-ci1">
+            <objects>
+                <viewController storyboardIdentifier="ClockViewController" id="xgi-0F-KWE" customClass="ClockViewController" customModule="EggChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7w2-Yp-Cyg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="egg" translatesAutoresizingMaskIntoConstraints="NO" id="aYO-Mq-bnf">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9jB-5q-Pef" customClass="Clocket" customModule="Clocket">
+                                <rect key="frame" x="57" y="40" width="300" height="300"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="3pt-vo-DAE"/>
+                                    <constraint firstAttribute="height" constant="300" id="WV8-md-Be7"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="displayRealTime" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3n0-yY-nXF" customClass="CustomButton" customModule="EggChallenge" customModuleProvider="target">
+                                <rect key="frame" x="107" y="370" width="200" height="55"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="Cah-2b-s1z"/>
+                                    <constraint firstAttribute="width" constant="200" id="nXb-SU-Luz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="28"/>
+                                <state key="normal" title="Start Timer">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="startButtonTapped:" destination="xgi-0F-KWE" eventType="touchUpInside" id="q6K-ea-7hf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1SY-PR-Ylg" customClass="CustomButton" customModule="EggChallenge" customModuleProvider="target">
+                                <rect key="frame" x="107" y="465" width="200" height="55"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="55" id="Kje-vG-sCY"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="fgc-Lh-b6w"/>
+                                    <constraint firstAttribute="height" constant="55" id="gDw-4q-qME"/>
+                                    <constraint firstAttribute="width" constant="200" id="gKC-wI-5EU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="28"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="resetButtonTapped:" destination="xgi-0F-KWE" eventType="touchUpInside" id="gkN-bd-le8"/>
+                                    <action selector="startButtonTapped:" destination="xgi-0F-KWE" eventType="touchUpInside" id="sMk-07-nMf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3n0-yY-nXF" firstAttribute="centerX" secondItem="7w2-Yp-Cyg" secondAttribute="centerX" id="0Pd-SU-Zy8"/>
+                            <constraint firstItem="aYO-Mq-bnf" firstAttribute="leading" secondItem="r1s-3T-z6u" secondAttribute="leading" id="4FI-4U-ael"/>
+                            <constraint firstItem="1SY-PR-Ylg" firstAttribute="centerX" secondItem="7w2-Yp-Cyg" secondAttribute="centerX" id="JAG-vD-eiA"/>
+                            <constraint firstItem="9jB-5q-Pef" firstAttribute="top" secondItem="r1s-3T-z6u" secondAttribute="top" constant="20" id="Jsj-lA-fTP"/>
+                            <constraint firstItem="1SY-PR-Ylg" firstAttribute="top" secondItem="3n0-yY-nXF" secondAttribute="bottom" constant="40" id="SJL-2Z-Dw8"/>
+                            <constraint firstItem="r1s-3T-z6u" firstAttribute="bottom" secondItem="aYO-Mq-bnf" secondAttribute="bottom" id="VDH-9v-dCj"/>
+                            <constraint firstItem="3n0-yY-nXF" firstAttribute="top" secondItem="9jB-5q-Pef" secondAttribute="bottom" constant="30" id="WL8-Nm-3ih"/>
+                            <constraint firstItem="r1s-3T-z6u" firstAttribute="trailing" secondItem="aYO-Mq-bnf" secondAttribute="trailing" id="aNK-Dq-kHS"/>
+                            <constraint firstItem="9jB-5q-Pef" firstAttribute="centerX" secondItem="7w2-Yp-Cyg" secondAttribute="centerX" id="l1m-PP-dZK"/>
+                            <constraint firstItem="aYO-Mq-bnf" firstAttribute="top" secondItem="7w2-Yp-Cyg" secondAttribute="top" id="qtp-ti-Yuq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="r1s-3T-z6u"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jRQ-BS-0Jn"/>
+                    <connections>
+                        <outlet property="clock" destination="9jB-5q-Pef" id="Tit-eA-IGG"/>
+                        <outlet property="startButton" destination="3n0-yY-nXF" id="1ef-w6-C4I"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tpQ-WG-SVt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1844.9275362318842" y="138.58695652173915"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dce-Oh-Kud">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="80G-O1-Iiy" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fic-HN-doX">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="fug-4m-Vui"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aPF-8l-NHj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="138.58695652173915"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="egg" width="739" height="415"/>
+    </resources>
+</document>
